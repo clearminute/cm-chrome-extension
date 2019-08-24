@@ -17,7 +17,6 @@ export default function Stats() {
       until: new Date().setHours(23, 59, 59, 59)
     };
 
-    console.log('send message from popup!');
     chrome.runtime.sendMessage(
       extensionId,
       {
@@ -25,35 +24,14 @@ export default function Stats() {
         message: statsOptions
       },
       function(response) {
-        const gaugeStats = createGaugeStats(response['aggregated_context']['statsByHour']);
+        const gaugeStats = createGaugeStats(response['statsByHour']);
         const productivity = calculateProductivity(gaugeStats);
         setProductivityScore(productivity);
-        setTopActivities(response['aggregated_context'].topActivities);
+        setTopActivities(response.topActivities);
       }
     );
   }, []);
 
-  useEffect(() => {
-    window.twttr = (function(d, s, id) {
-      var js,
-        fjs = d.getElementsByTagName(s)[0],
-        t = window.twttr || {};
-      if (d.getElementById(id)) return t;
-      js = d.createElement(s);
-      js.id = id;
-      js.src = 'https://platform.twitter.com/widgets.js';
-      fjs.parentNode.insertBefore(js, fjs);
-
-      t._e = [];
-      t.ready = function(f) {
-        t._e.push(f);
-      };
-
-      return t;
-    })(document, 'script', 'twitter-wjs');
-  }, []);
-
-  console.log(topActivities);
   return (
     <div className={styles.container}>
       <h3 className={styles.title}> PRODUCTIVITY SCORE </h3>
@@ -69,13 +47,6 @@ export default function Stats() {
           </li>
         ))}
       </ul>
-
-      <a
-        className="twitter-share-button"
-        href="https://twitter.com/intent/tweet?text=Hello%20world"
-      >
-        Tweet
-      </a>
       <a
         className={styles.link}
         href={isProduction ? 'https://light.clearminute.com' : 'http://localhost:8080/'}

@@ -22,19 +22,17 @@
       "http://localhost:8080/"
     ]
   },
-  "content_scripts": [
-    {
-      "matches": [
-        "https://light.clearminute.com/*",
-        "http://localhost:8080/"
-      ],
-      "all_frames": true,
-      "js": [
-        "content-script/index.js"
-      ]
-    }
-  ],
-  "content_security_policy": "script-src 'self' https://platform.twitter.com https://unpkg.com blob: filesystem: chrome-extension-resource:",
+  "content_scripts": [{
+    "matches": [
+      "https://light.clearminute.com/*",
+      "http://localhost:8080/"
+    ],
+    "all_frames": true,
+    "js": [
+      "content-script/index.js"
+    ]
+  }],
+  "content_security_policy": "script-src 'self' https://unpkg.com; object-src 'self'",
   "icons": {
     "16": "assets/icon16.png",
     "48": "assets/icon48.png",

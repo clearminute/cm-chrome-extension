@@ -2,7 +2,7 @@ import { state, setState } from './state.js';
 import isBrowserFocused from './isBrowserFocused.js';
 import isIdle from './isIdle.js';
 import getHostname from './getHostname.js';
-import createHourIdentifier from './createHourIdentifier.js';
+import debugLog from './debugLog.js';
 import createDayIdentifier from './createDayIdentifier.js';
 import { db } from './database/db.js';
 
@@ -86,7 +86,8 @@ async function maybeHandleFocusTick() {
 }
 
 export default function handleTick() {
-  console.log('handle tick', state);
+  debugLog('handle tick', state);
+
   if (isIdle()) {
     return;
   }

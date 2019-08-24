@@ -1,6 +1,5 @@
 /* global chrome */
 import * as React from 'react';
-import { useEffect } from 'react';
 import Focus from './Focus';
 import Stats from './Stats';
 import styles from './home.module.css';
