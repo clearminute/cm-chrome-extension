@@ -1,6 +1,7 @@
 import { db } from './database/db.js';
 import createHourIdentifier from './createHourIdentifier.js';
 import { getFocusTime } from './handlePopupMessage.js';
+import debugLog from './debugLog.js';
 
 async function queryStatsForIdentifier(statsIdentifier) {
   const transaction = db.transaction(['stats'], 'readonly');
@@ -120,7 +121,7 @@ export async function createStats(statsOptions, response) {
     statsByHour[year][month][day][hour].mostActiveActivities = topHourlyActivities;
   }
 
-  console.log('responding with stats', {
+  debugLog('responding with stats', {
     statsByHour,
     topActivities
   });
@@ -155,7 +156,7 @@ async function editActivity(message, response) {
 }
 
 export default function handleDashboardMessage(request, sender, sendResponse) {
-  console.log('Dashboard Message', request);
+  debugLog('Dashboard Message', request);
 
   if (request.type === 'LOAD_STATS') {
     createStats(request.message, sendResponse);
