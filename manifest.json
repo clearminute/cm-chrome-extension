@@ -1,8 +1,8 @@
 {
-  "name": "light.clearminute",
+  "name": "clearminute",
   "manifest_version": 2,
-  "version": "0.0.24",
-  "description": "clearminute light",
+  "version": "0.0.25",
+  "description": "Unlock the full potential of your 24 hours.",
   "permissions": [
     "tabs",
     "idle",
