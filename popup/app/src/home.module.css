@@ -1,0 +1,36 @@
+.home {
+  background-color: var(--dark-sky-blue);
+  width: 650px;
+  height: 500px;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 300px 300px;
+  grid-template-rows: 400px;
+  grid-column-gap: 15px;
+  justify-content: center;
+}
+
+.header {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  margin-left: 22px;
+}
+
+.logo {
+  width: 50px;
+}
+
+.title {
+  font-weight: 600;
+  margin-left: 8px;
+  font-family: 'Montserrat';
+  color: white;
+  font-size: 24px;
+}
+
+.thin {
+  font-weight: 300;
+}

@@ -1,0 +1,13 @@
+@import '_colors.css';
+@import '_fonts.css';
+
+html,
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  font-family: 'Open Sans', sans-serif;
+}

@@ -1,0 +1,55 @@
+.focus-session-progress {
+  background-color: var(--charcoal-grey);
+  width: 350px;
+  height: 300px;
+  position: relative;
+}
+
+.focus-session-achieved {
+  background-color: var(--link-water);
+  width: 350px;
+  height: 300px;
+  position: relative;
+}
+
+.logo {
+  width: 50px;
+  margin: 20px;
+}
+
+.buttons {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.title {
+  color: white;
+  font-size: 28px;
+  text-align: center;
+  margin-top: 0;
+}
+
+.button {
+  width: 50%;
+  height: 70px;
+  border: 0;
+  color: white;
+  font-size: 18px;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.button-cancel {
+  background-color: #420202;
+}
+
+.button-break {
+  background-color: #61af6e;
+}
+
+.button-configure {
+  background-color: #43474e;
+}

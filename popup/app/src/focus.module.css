@@ -1,0 +1,54 @@
+.container {
+  background-color: var(--charcoal-grey);
+  border-radius: 4px;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+
+.title {
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+.focusTime {
+  font-size: 32px;
+  font-weight: 600;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.description {
+  font-size: 14px;
+}
+
+.button {
+  margin-top: 30px;
+  width: 200px;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.2);
+  font-size: 22px;
+  color: white;
+  border: 0;
+  border-radius: 8px;
+  transition: transform 0.1s;
+}
+
+.button:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+  transform: translate(0px, -1px);
+  cursor: pointer;
+  box-shadow: 0 2px 9px 0 var(--dark-charcoal-grey);
+}
+
+.link {
+  position: absolute;
+  display: block;
+  bottom: 20px;
+  width: 100%;
+  font-size: 12px;
+  color: var(--windows-blue);
+  text-decoration: none;
+  font-weight: 600;
+}

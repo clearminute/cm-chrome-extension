@@ -1,0 +1,30 @@
+{
+  "name": "light.clearminute",
+  "manifest_version": 2,
+  "version": "0.0.23",
+  "description": "clearminute light",
+  "permissions": ["tabs", "idle", "*://*.clearminute.com/*", "http://localhost:8080/"],
+  "browser_action": {
+    "default_popup": "popup/app/build/index.html"
+  },
+  "background": {
+    "page": "background/index.html",
+    "persistent": true
+  },
+  "externally_connectable": {
+    "matches": ["https://light.clearminute.com/*", "http://localhost:8080/"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://light.clearminute.com/*", "http://localhost:8080/"],
+      "all_frames": true,
+      "js": ["content-script/index.js"]
+    }
+  ],
+  "content_security_policy": "script-src 'self' https://platform.twitter.com https://unpkg.com blob: filesystem: chrome-extension-resource:",
+  "icons": {
+    "16": "assets/icon16.png",
+    "48": "assets/icon48.png",
+    "128": "assets/icon128.png"
+  }
+}
