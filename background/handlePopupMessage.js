@@ -2,6 +2,7 @@ import createDayIdentifier from './createDayIdentifier.js';
 import { db } from './database/db.js';
 import { state } from './state.js';
 import { createStats } from './handleDashboardMessage.js';
+import debugLog from './debugLog.js';
 
 export async function getFocusTime(response, options = { from: new Date() }) {
   const focusIdentifierForDay = createDayIdentifier(options.from);
@@ -29,7 +30,7 @@ function startFocusSession(response) {
     return;
   }
 
-  console.log('starting focus..');
+  debugLog('starting focus..');
   state.isInFocus = true;
   state.focusSessionId = Date.now();
   const dayIdentifier = createDayIdentifier(new Date());
@@ -42,7 +43,7 @@ function startFocusSession(response) {
 }
 
 async function stopFocusSession(response) {
-  console.log('stopping focus...', state);
+  debugLog('stopping focus...', state);
   const transaction = db.transaction(['focus'], 'readwrite');
   const objectStore = transaction.objectStore('focus');
   const index = objectStore.index('focusIdentifierForDay');
@@ -85,7 +86,7 @@ function getCurrentFocusSessionTime(response) {
 }
 
 export default function handlePopupMessage(request, sender, sendResponse) {
-  console.log('Pop up message!', request.type);
+  debugLog('Pop up message!', request.type);
   if (request.type === 'LOAD_STATS') {
     createStats(request.message, sendResponse);
   }

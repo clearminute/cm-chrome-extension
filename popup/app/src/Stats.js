@@ -17,7 +17,6 @@ export default function Stats() {
       until: new Date().setHours(23, 59, 59, 59)
     };
 
-    console.log('send message from popup!');
     chrome.runtime.sendMessage(
       extensionId,
       {
@@ -33,7 +32,6 @@ export default function Stats() {
     );
   }, []);
 
-  console.log(topActivities);
   return (
     <div className={styles.container}>
       <h3 className={styles.title}> PRODUCTIVITY SCORE </h3>

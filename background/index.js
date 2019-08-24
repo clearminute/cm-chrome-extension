@@ -3,9 +3,10 @@ import persistBatch from './persistBatch.js';
 import handleTick from './handleTick.js';
 import handleDashboardMessage from './handleDashboardMessage.js';
 import handlePopupMessage from './handlePopupMessage.js';
+import debugLog from './debugLog.js';
 
 async function start() {
-  console.log('start...');
+  debugLog('start...');
   chrome.browserAction.setBadgeBackgroundColor({ color: 'black' });
 
   // If no user input generated within 120 seconds, idle
@@ -36,7 +37,7 @@ async function start() {
   }, 1000);
 
   setInterval(async () => {
-    console.log('PERSIST BATCH');
+    debugLog('PERSIST BATCH');
     persistBatch();
   }, 10 * 1000);
 }
