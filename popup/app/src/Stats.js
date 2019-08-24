@@ -25,10 +25,10 @@ export default function Stats() {
         message: statsOptions
       },
       function(response) {
-        const gaugeStats = createGaugeStats(response['aggregated_context']['statsByHour']);
+        const gaugeStats = createGaugeStats(response['statsByHour']);
         const productivity = calculateProductivity(gaugeStats);
         setProductivityScore(productivity);
-        setTopActivities(response['aggregated_context'].topActivities);
+        setTopActivities(response.topActivities);
       }
     );
   }, []);

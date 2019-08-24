@@ -121,16 +121,12 @@ export async function createStats(statsOptions, response) {
   }
 
   console.log('responding with stats', {
-    aggregated_context: {
-      statsByHour,
-      topActivities
-    }
+    statsByHour,
+    topActivities
   });
   response({
-    aggregated_context: {
-      statsByHour,
-      topActivities
-    }
+    statsByHour,
+    topActivities
   });
 }
 
