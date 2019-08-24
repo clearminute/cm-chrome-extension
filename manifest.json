@@ -1,9 +1,14 @@
 {
   "name": "light.clearminute",
   "manifest_version": 2,
-  "version": "0.0.23",
+  "version": "0.0.24",
   "description": "clearminute light",
-  "permissions": ["tabs", "idle", "*://*.clearminute.com/*", "http://localhost:8080/"],
+  "permissions": [
+    "tabs",
+    "idle",
+    "*://*.clearminute.com/*",
+    "http://localhost:8080/"
+  ],
   "browser_action": {
     "default_popup": "popup/app/build/index.html"
   },
@@ -12,13 +17,21 @@
     "persistent": true
   },
   "externally_connectable": {
-    "matches": ["https://light.clearminute.com/*", "http://localhost:8080/"]
+    "matches": [
+      "https://light.clearminute.com/*",
+      "http://localhost:8080/"
+    ]
   },
   "content_scripts": [
     {
-      "matches": ["https://light.clearminute.com/*", "http://localhost:8080/"],
+      "matches": [
+        "https://light.clearminute.com/*",
+        "http://localhost:8080/"
+      ],
       "all_frames": true,
-      "js": ["content-script/index.js"]
+      "js": [
+        "content-script/index.js"
+      ]
     }
   ],
   "content_security_policy": "script-src 'self' https://platform.twitter.com https://unpkg.com blob: filesystem: chrome-extension-resource:",
