@@ -1,6 +1,6 @@
 # About
 
-Experimental chrome extension to track your time visiting websites. Uses local storage (indexDB) and powered by https://light.clearminute.com.
+Experimental chrome extension to track your time visiting websites. Uses local storage (indexDB) and hosted at GCloud at https://clearminute-151818.appspot.com/#/
 
 # Release
 

@@ -55,7 +55,7 @@ export default function FocusSession() {
             <button
               className={[styles.button, styles['button-configure']].join(' ')}
               onClick={() => {
-                chrome.tabs.create({ url: 'https://light.clearminute.com/#/activities' });
+                chrome.tabs.create({ url: 'https://clearminute-151818.appspot.com/#/activities' });
               }}
             >
               Configure Apps
@@ -90,7 +90,7 @@ export default function FocusSession() {
             <button
               className={[styles.button, styles['button-configure']].join(' ')}
               onClick={() => {
-                chrome.tabs.create({ url: 'https://light.clearminute.com/#/activities' });
+                chrome.tabs.create({ url: 'https://clearminute-151818.appspot.com/#/activities' });
               }}
             >
               Configure Apps
