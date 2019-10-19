@@ -72,7 +72,7 @@ async function maybeHandleFocusTick() {
     const savedActivitiy = await index.get(title);
 
     if (savedActivitiy.productivityKey === 'distracting') {
-      chrome.tabs.update({ url: 'https://www.clearminute.com/stop.html' });
+      chrome.tabs.update({ url: 'https://clearminute.github.io/stop.html' });
     }
   }
 

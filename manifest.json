@@ -1,12 +1,12 @@
 {
   "name": "clearminute",
   "manifest_version": 2,
-  "version": "0.0.25",
+  "version": "0.0.26",
   "description": "Unlock the full potential of your 24 hours.",
   "permissions": [
     "tabs",
     "idle",
-    "*://*.clearminute.com/*",
+    "*://clearminute-151818.appspot.com/*",
     "http://localhost:8080/"
   ],
   "browser_action": {
@@ -18,13 +18,13 @@
   },
   "externally_connectable": {
     "matches": [
-      "https://light.clearminute.com/*",
+      "https://clearminute-151818.appspot.com/*",
       "http://localhost:8080/"
     ]
   },
   "content_scripts": [{
     "matches": [
-      "https://light.clearminute.com/*",
+      "https://clearminute-151818.appspot.com/*",
       "http://localhost:8080/"
     ],
     "all_frames": true,
