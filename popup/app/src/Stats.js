@@ -49,7 +49,7 @@ export default function Stats() {
       </ul>
       <a
         className={styles.link}
-        href={isProduction ? 'https://light.clearminute.com' : 'http://localhost:8080/'}
+        href={isProduction ? 'https://clearminute-151818.appspot.com/' : 'http://localhost:8080/'}
         target="_blank"
         rel="noopener noreferrer"
       >

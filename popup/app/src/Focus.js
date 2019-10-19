@@ -38,14 +38,6 @@ export default function Focus() {
       <button className={styles.button} onClick={() => appDispatch({ type: 'SET_VIEW', view: 'FOCUS_SESSION' })}>
         Quick Start
       </button>
-      <a
-        className={styles.link}
-        href="https://www.clearminute.com/blog/posts/uninterrupted-focus"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        WHY DO I NEED DEEP FOCUS?
-      </a>
     </div>
   );
 }
